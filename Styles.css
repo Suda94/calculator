@@ -1,3 +1,33 @@
-.calcDisplay{
-    
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, rgb(201, 138, 138), rgb(89, 89, 170));
+}
+
+.calcalutor-grid {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto);
+}
+.calcalutor-grid > button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: 1px, solid #ffff;
+  outline: none;
+  background-color: rgb(255, 255, 255, 0.75);
+}
+
+.calcalutor-grid > button:hover {
+  background-color: #476f79;
 }
