@@ -6,7 +6,7 @@ class Calculator {// create a template using class in built function.
 } {
     this.previousOperandTextElement = previousOperandTextElement;
     this.currentOperandTextElement = currentOperandTextElement;
-    this.clearInterval();
+    this.clear();
 }
 
 clear()
@@ -16,6 +16,7 @@ clear()
     this.operation = undefined;
 
 };
+
 delete ()
 {
     this.currentOperand = this.currentOperand.toString().slice(0, -1);
@@ -24,11 +25,18 @@ delete ()
 
 appendNumber(number){
     if (number === "." && this.currentOperand.includes('.'))
-        return.currentOperand = this.currentOperand.toString() + number.toString()
+        return currentOperand = this.currentOperand.toString() + number.toString()
 };
 
 chooseOperation(operation){
-
+    if (this.currentOperand === '')
+        return
+    if (this.previousOperand !== '') {
+        this.compute()
+    }
+    this.operation = operation
+    this.previousOperand = this.currentOperand
+    this.currentOperand = ''
 }
 
 compute() {
