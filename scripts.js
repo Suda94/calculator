@@ -20,15 +20,16 @@ clear()
 delete ()
 {
     this.currentOperand = this.currentOperand.toString().slice(0, -1);
-
 };
 
-appendNumber(number){
+appendNumber(number)
+{
     if (number === "." && this.currentOperand.includes('.'))
         return currentOperand = this.currentOperand.toString() + number.toString()
 };
 
-chooseOperation(operation){
+chooseOperation(operation)
+{
     if (this.currentOperand === '')
         return
     if (this.previousOperand !== '') {
@@ -39,13 +40,15 @@ chooseOperation(operation){
     this.currentOperand = ''
 }
 
-compute() {
+compute()
+{
+
 
 }
-updateDisplay(){
+updateDisplay()
+{
 
 }
-
 
 //button operations:
 
