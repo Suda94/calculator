@@ -23,7 +23,8 @@ delete ()
 };
 
 appendNumber(number){
-
+    if (number === "." && this.currentOperand.includes('.'))
+        return.currentOperand = this.currentOperand.toString() + number.toString()
 };
 
 chooseOperation(operation){
