@@ -3,7 +3,8 @@
 
 class Calculator {// create a template using class in built function. 
     constructor(previousOperandTextElement, currentOperandTextElement)
-} {
+}
+{
     this.previousOperandTextElement = previousOperandTextElement;
     this.currentOperandTextElement = currentOperandTextElement;
     this.clear();
@@ -112,4 +113,27 @@ numberButtons.forEach(button => {
         calculator.appendNumber(button.innerText)
         calculator.updateDisplay()
     })
+})
+
+operationButtons.forEach(button => {
+    button, addEventListener('click', () => {
+        calculator.chooseOperation(button.innerText)
+        calculator.updateDisplay()
+    })
+})
+
+equalsButton.addEventListener('click', () => {
+    calculator.compute()
+    calculator.updateDisplay()
+})
+
+
+allClearButton.addEventListener('click', () => {
+    calculator.clear()
+    calculator.updateDisplay()
+})
+
+deleteButton.addEventListener('click', () => {
+    calculator.delete()
+    calculator.updateDisplay()
 })
